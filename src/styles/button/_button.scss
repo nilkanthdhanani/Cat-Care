@@ -1,0 +1,70 @@
+
+
+.read-more-button {
+    margin-top: 30px;
+
+    button {
+        padding: 12px 33px;
+        background-color: var(--bgcolor2);
+        color: var(--color-white);
+        @include font14;
+        font-weight: inherit;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: var(--bgcolor4);
+            color: var(--color-black);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+.mailbox-input {
+    margin-top: 30px;
+
+    button {
+        padding: 16px 43px;
+        background-color: var(--bgcolor5);
+        color: var(--color-white);
+        @include font14;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: var(--bgcolor4);
+            color: var(--color-black);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
+
+.help-button {
+    margin-top: 30px;
+
+    button {
+        width: 100%;
+        padding: 16px;
+        background-color: var(--bgcolor2);
+        color: var(--color-white);
+        @include font16;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background-color: var(--bgcolor4);
+            color: var(--color-black);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
