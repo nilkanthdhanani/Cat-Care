@@ -35,6 +35,12 @@
     line-height: 1.1;
 }
 
+@mixin font36 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
 @mixin font48 {
     font-size: 48px;
     font-weight: 700;

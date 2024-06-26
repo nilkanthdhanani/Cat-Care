@@ -1,10 +1,7 @@
 import React from 'react';
 import './home.scss';
 import { cat1, cat2, cat3, thinking, catlove1, catlove2, catlove3, mailCat, ladyCat, ladyCat2 } from '../../assets/images/jpg.js';
-import facebook from '../../assets/images/svg/facebook.svg';
-import twitter from '../../assets/images/svg/twitter.svg';
-import instagram from '../../assets/images/svg/instagram.svg';
-import google from '../../assets/images/svg/google.svg';
+import {facebook2, google2,instagram2,twitter2} from '../../assets/images/svg.js';
 
 export default function Home() {
   const details = [
@@ -149,16 +146,16 @@ export default function Home() {
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
               <div className="help-social-media">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                  <img src={facebook} alt="facebook" />
+                  <img src={facebook2} alt="facebook" />
                 </a>
                 <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                  <img src={twitter} alt="twitter" />
+                  <img src={twitter2} alt="twitter" />
                 </a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                  <img src={instagram} alt="instagram" />
+                  <img src={instagram2} alt="instagram" />
                 </a>
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <img src={google} alt="message" />
+                  <img src={google2} alt="message" />
                 </a>
               </div>
             </div>

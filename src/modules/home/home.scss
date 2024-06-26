@@ -6,15 +6,19 @@
     min-height: 765px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 50% 50%;
 
     @include breakpoint("sm-max") {
-        display: none;
+        min-height: 400px;
     }
 
     .hero-banner-text {
         padding-top: 150px;
         color: var(--color-white);
+
+        @include breakpoint("sm-max") {
+            padding-top: 100px;
+        }
 
         span {
             display: block;
@@ -31,6 +35,10 @@
             @include font72;
             letter-spacing: 2px;
             text-align: right;
+
+            @include breakpoint("sm-max") {
+                @include font36;
+            }
         }
     }
 }
@@ -47,20 +55,46 @@
         #ded9d7 100%
     );
 
+    @include breakpoint("sm-max") {
+        padding: 50px 0;
+        background: linear-gradient(
+            to bottom,
+            #ded9d7 0%,
+            #ded9d7 35%,
+            #59504c 35%,
+            #59504c 75%,
+            #ded9d7 75%,
+            #ded9d7 100%
+        );
+    }
+
     .welcome-head {
         color: var(--font-color);
         margin: 60px 0 40px 0;
         text-align: center;
 
+        @include breakpoint("sm-max") {
+            margin: 0 0 40px 0;
+        }
+
         h2 {
             @include font55;
             margin-bottom: 15px;
+
+            @include breakpoint("sm-max") {
+                @include font36;
+            }
         }
+
         p {
             max-width: 778px;
             margin: 0 auto;
             line-height: 1.6;
             @include font20;
+
+            @include breakpoint("sm-max") {
+                @include font18;
+            }
         }
     }
 
@@ -68,6 +102,14 @@
         @include grid3c;
         gap: 25px;
         min-height: 900px;
+
+        @include breakpoint("lg-max") {
+            @include grid2c;
+        }
+
+        @include breakpoint("sm-max") {
+            @include grid1c;
+        }
 
         .welcome-grid-box1,
         .welcome-grid-box2,
@@ -78,6 +120,16 @@
             border-radius: 20px;
             text-align: center;
             color: var(--font-color);
+
+            @include breakpoint("lg-max") {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 30px;
+            }
+
+            @include breakpoint("sm-max") {
+                padding: 15px;
+            }
 
             img {
                 width: 100%;
@@ -109,6 +161,14 @@
         }
         .welcome-grid-box3 {
             align-self: flex-end;
+
+            @include breakpoint("lg-max") {
+                grid-column: 1 / span 2;
+            }
+
+            @include breakpoint("sm-max") {
+                grid-column: 1;
+            }
         }
     }
 }
@@ -117,15 +177,33 @@
     background: linear-gradient(to bottom, #ded9d7 0%, #ded9d7 32%, #f7f5f5 32%, #f7f5f5 100%);
     padding-bottom: 100px;
 
+    @include breakpoint("sm-max") {
+        padding-bottom: 50px;
+    }
+
     .thinking-div {
         position: relative;
         padding-bottom: 300px;
+
+        @include breakpoint("lg-max") {
+            padding-bottom: 0;
+        }
 
         img {
             max-width: 845px;
             width: 100%;
             border-radius: 20px;
             margin: 0 auto;
+
+            @include breakpoint("lg-max") {
+                margin-left: 50px;
+                width: calc(100% - 50px);
+            }
+
+            @include breakpoint("sm-max") {
+                width: 100%;
+                margin-left: 0;
+            }
         }
 
         .thinking-div1 {
@@ -139,15 +217,34 @@
             color: var(--color-white);
             box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.25);
 
+            @include breakpoint("lg-max") {
+                position: inherit;
+                bottom: 50px;
+            }
+
+            @include breakpoint("sm-max") {
+                bottom: 0;
+                margin-top: 20px;
+                padding: 15px;
+            }
+
             span {
                 @include font24;
                 font-family: var(--font-family-open);
                 font-weight: 500;
+
+                @include breakpoint("sm-max") {
+                    @include font20;
+                }
             }
 
             h2 {
                 @include font60;
                 margin: 10px 0 30px 0;
+
+                @include breakpoint("sm-max") {
+                    @include font36;
+                }
             }
         }
 
@@ -161,6 +258,16 @@
             border-radius: 20px;
             color: var(--font-color);
             box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.25);
+
+            @include breakpoint("lg-max") {
+                position: initial;
+                margin: 0 auto;
+            }
+
+            @include breakpoint("sm-max") {
+                margin-top: 20px;
+                padding: 15px;
+            }
 
             h3 {
                 @include font30;
@@ -182,9 +289,17 @@
     background: linear-gradient(to bottom, #f7f5f5 0%, #f7f5f5 38%, #59504c 38%, #59504c 100%);
     padding: 100px 0;
 
+    @include breakpoint("lg-max") {
+        padding: 0;
+    }
+
     .cat-love-grid {
         @include grid2c;
         gap: 30px;
+
+        @include breakpoint("lg-max") {
+            @include grid1c;
+        }
 
         .cat-love-grid-box {
             border-radius: 35px;
@@ -193,14 +308,33 @@
             @include flex;
             height: 490px;
 
+            @include breakpoint("lg-max") {
+                width: 500px;
+                margin: 0 auto;
+            }
+
+            @include breakpoint("sm-max") {
+                width: 100%;
+                border-radius: 20px;
+                height: 100%;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
+                @include breakpoint("sm-max") {
+                    max-height: 315px;
+                }
             }
 
             .cat-love-grid-box-text {
                 padding: 30px;
+
+                @include breakpoint("sm-max") {
+                    padding: 15px;
+                }
 
                 h2 {
                     @include font30;
@@ -221,6 +355,10 @@
     padding: 60px 0;
     background-color: var(--bgcolor2);
 
+    @include breakpoint("lg-max") {
+        margin: -2px 0;
+    }
+
     .mailbox-img {
         @include flex-center;
 
@@ -230,6 +368,10 @@
             object-fit: cover;
             border-radius: 50%;
             border: 10px solid var(--bgcolor4);
+
+            @include breakpoint("sm-max") {
+                width: 100%;
+            }
         }
     }
 
@@ -239,6 +381,10 @@
         max-width: 690px;
         color: var(--color-white);
         text-align: center;
+
+        @include breakpoint("sm-max") {
+            @include font36;
+        }
     }
 
     .mailbox-input {
@@ -246,6 +392,10 @@
         gap: 15px;
         max-width: 550px;
         margin: 0 auto;
+
+        @include breakpoint("sm-max") {
+            flex-wrap: wrap;
+        }
 
         input {
             width: 100%;
@@ -272,14 +422,27 @@
     background: linear-gradient(to bottom, #59504c 0%, #59504c 65%, #f7f5f5 65%, #f7f5f5 100%);
     padding: 60px 0;
 
+    @include breakpoint("lg-max") {
+        padding: 0;
+    }
+
     .details-div {
         position: relative;
         padding-bottom: 150px;
+
+        @include breakpoint("lg-max") {
+            padding-bottom: 250px;
+        }
+
+        @include breakpoint("md-max") {
+            padding: 0;
+        }
 
         img {
             max-width: 670px;
             border-radius: 20px;
             object-fit: cover;
+            width: 100%;
         }
 
         .details-div-grid {
@@ -289,10 +452,24 @@
             @include grid2c;
             gap: 25px;
 
+            @include breakpoint("md-max") {
+                position: inherit;
+                margin-top: -100px;
+            }
+
+            @include breakpoint("sm-max") {
+                margin-top: 20px;
+                @include grid1c;
+            }
+
             .details-div-grid-box {
                 background-color: var(--color-white);
                 padding: 30px;
                 border-radius: 20px;
+
+                @include breakpoint("sm-max") {
+                    padding: 15px 20px;
+                }
 
                 h3 {
                     @include font18;
@@ -307,6 +484,10 @@
                     line-height: 1.8;
                     max-width: 220px;
                     color: var(--font-color);
+
+                    @include breakpoint("sm-max") {
+                        max-width: 100%;
+                    }
                 }
 
                 a {
@@ -327,24 +508,45 @@
     background: var(--bgcolor6);
     padding: 60px 0;
 
+    @include breakpoint("lg-max") {
+        padding: 60px 0 0 0;
+    }
+
     .keep-happy-grid {
         @include grid2c;
         gap: 0;
         align-items: center;
 
+        @include breakpoint("lg-max") {
+            @include grid1c;
+            gap: 50px;
+        }
+
         .khg-div1 {
             padding: 30px;
             color: var(--font-color);
 
+            @include breakpoint("sm-max") {
+                padding: 0;
+            }
+
             h2 {
                 margin: 30px 0;
                 @include font30;
+
+                @include breakpoint("sm-max") {
+                    margin: 0 0 30px 0;
+                }
             }
 
             p {
                 @include font16;
                 margin-bottom: 30px;
                 line-height: 1.8;
+
+                @include breakpoint("lg-max") {
+                    max-width: 510px;
+                }
             }
         }
 
@@ -359,6 +561,16 @@
                 position: relative;
                 margin-bottom: 50px;
 
+                @include breakpoint("sm-max") {
+                    padding: 150px;
+                    margin: 0 auto;
+                }
+
+                @include breakpoint("xs-max") {
+                    padding: 100px;
+                    margin: 0 auto 20px auto;
+                }
+
                 img {
                     position: absolute;
                     top: 15%;
@@ -367,6 +579,20 @@
                     max-width: 380px;
                     min-height: 380px;
                     object-fit: cover;
+
+                    @include breakpoint("sm-max") {
+                        left: -10%;
+                        top: 10%;
+                        max-width: 280px;
+                        min-height: 280px;
+                    }
+
+                    @include breakpoint("xs-max") {
+                        left: -10%;
+                        top: 10%;
+                        max-width: 200px;
+                        min-height: 200px;
+                    }
                 }
             }
         }
@@ -376,6 +602,10 @@
 .help {
     background: linear-gradient(to bottom, #f7f5f5 0%, #f7f5f5 50%, #59504c 50%, #59504c 100%);
     padding: 80px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 50px 0;
+    }
 
     .help-div {
         padding: 60px 50px;
@@ -387,10 +617,23 @@
         align-items: center;
         gap: 40px;
 
+        @include breakpoint("sm-max") {
+            padding: 15px 20px;
+        }
+
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+        }
+
         .help-div1 {
             h2 {
                 @include font30;
                 color: var(--font-color);
+
+                @include breakpoint("sm-max") {
+                    @include font24;
+                    font-weight: 600;
+                }
             }
 
             p {
@@ -398,6 +641,10 @@
                 line-height: 2;
                 color: var(--font-color2);
                 margin: 20px 0 30px 0;
+
+                @include breakpoint("sm-max") {
+                    @include font16;
+                }
             }
 
             .help-social-media {
@@ -438,6 +685,10 @@
                 @include flex;
                 gap: 15px;
                 margin-top: 15px;
+
+                @include breakpoint("sm-max") {
+                    flex-wrap: wrap;
+                }
             }
         }
     }

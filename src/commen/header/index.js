@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './header.scss';
-import {logo, close, menu} from '../../assets/images/png';
+import { logo, close, menu } from '../../assets/images/png';
 import '../../styles/mixin/_mixin.scss';
 import { Link, NavLink } from 'react-router-dom';
 
