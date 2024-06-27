@@ -10,14 +10,14 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h4>About Us</h4>
-            <p>We are a premium barber shop offering top-notch services to make you look and feel your best. Visit us for an exceptional grooming experience.</p>
+            <p>We strive to make every visit a purrfect experience for your beloved pets. At Purrfection Cat Care, we treat every cat as if they were our own, with love, compassion, and the utmost respect. Join our family and let us help your cat live a happy, healthy, and contented life.</p>
           </div>
           <div className="footer-section">
             <h4>Contact Us</h4>
             <ul>
-              <li>123 Barber Street, City, Country</li>
+              <li>123 Nevada Street, City, Country</li>
               <li>Phone: (123) 456-7890</li>
-              <li>Email: contact@barbershop.com</li>
+              <li>Email: contact@catcare.com</li>
             </ul>
           </div>
           <div className="footer-section">
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 Barber Shop. All rights reserved.</p>
+          <p>&copy; 2024 Cat Care. All rights reserved.</p>
         </div>
       </div>
     </div>

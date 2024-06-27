@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.scss';
 import { cat1, cat2, cat3, thinking, catlove1, catlove2, catlove3, mailCat, ladyCat, ladyCat2 } from '../../assets/images/jpg.js';
-import {facebook2, google2,instagram2,twitter2} from '../../assets/images/svg.js';
+import { facebook2, google2, instagram2, twitter2 } from '../../assets/images/svg.js';
 
 export default function Home() {
   const details = [
