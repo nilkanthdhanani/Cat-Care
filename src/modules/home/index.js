@@ -19,7 +19,7 @@ export default function Home() {
     <div>
       <section className="hero-banner">
         <div className="container">
-          <div className="hero-banner-text">
+          <div className="hero-banner-text" data-aos="fade-left" data-aos-duration="2000">
             <span>TIPS FOR LIFE WITH CATS</span>
             <h1>CAT STORIES, NEWS, TIPS & TRICKS</h1>
           </div>
@@ -29,12 +29,12 @@ export default function Home() {
       <section className="welcome">
         <div className="container2">
           <div className="welcome-head">
-            <h2>Welcome to Club Cat Blog</h2>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+            <h2 data-aos="fade-up" data-aos-duration="2000">Welcome to Club Cat Blog</h2>
+            <p data-aos="fade-down" data-aos-duration="2000">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
           </div>
           <div className="welcome-grid">
             {[cat1, cat2, cat3].map((cat, index) => (
-              <div key={index} className={`welcome-grid-box welcome-grid-box${index + 1}`}>
+              <div key={index} className={`welcome-grid-box welcome-grid-box${index + 1}`} data-aos="fade-up" data-aos-duration="1000">
                 <img src={cat} alt={`cat${index + 1}`} />
                 <h3>Cat Cafe</h3>
                 <p>Etiam erat velit scelerisque in dictum non consectetur. Nisl purus in mollis nunc sed id semper. Cras fermentum odio eu feugiat pretium nibh ipsum. Tristique senectus</p>
@@ -49,11 +49,11 @@ export default function Home() {
         <div className="container">
           <div className="thinking-div">
             <img src={thinking} alt="thinking" />
-            <div className="thinking-div1">
+            <div className="thinking-div1" data-aos="fade-right" data-aos-duration="2000">
               <span>CAT BLOG</span>
               <h2>Thinking of getting a cat?</h2>
             </div>
-            <div className="thinking-div2">
+            <div className="thinking-div2" data-aos="fade-left" data-aos-duration="1000">
               <h3>Cat Care for Beginners</h3>
               <ol>
                 {["Provide plenty of human companionship.", "Provide regular, suitable meals with a constant supply of fresh water.", "Provide a clean and comfortable bed.", "Provide the cat with outdoor access or be prepared to empty and clean a litter tray on a daily basis."]
@@ -71,11 +71,11 @@ export default function Home() {
         <div className="container3">
           <div className="cat-love-grid">
             {[catlove1, catlove2, catlove3].map((cat, index) => (
-              <div key={index} className="cat-love-grid-box">
+              <div key={index} className="cat-love-grid-box" data-aos="fade-up" data-aos-duration="1000">
                 <img src={cat} alt={`catlove${index + 1}`} />
               </div>
             ))}
-            <div className="cat-love-grid-box">
+            <div className="cat-love-grid-box" data-aos="fade-up" data-aos-duration="1000">
               <div className="cat-love-grid-box-text">
                 <h2>Why do we love cats?</h2>
                 <p>Adipiscing bibendum est ultricies integer quis auctor elit. Eget nunc scelerisque viverra mauris in. Volutpat est velit egestas dui id. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Nulla pharetra diam sit amet nisl. Lorem ipsum dolor sit amet consectetur adipiscing elit. Tempus quam pellentesque nec nam aliquam sem et. Nunc</p>
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="mailbox-img">
             <img src={mailCat} alt="mailcat" />
           </div>
-          <h2>Get the greatest stories right in your mailbox</h2>
+          <h2 data-aos="fade-up" data-aos-duration="2000">Get the greatest stories right in your mailbox</h2>
           <div className="mailbox-input">
             <input type="email" placeholder='Enter a valid email address' />
             <button>SUBMIT</button>
@@ -108,7 +108,7 @@ export default function Home() {
             <img src={ladyCat} alt="ladyCat" />
             <div className="details-div-grid">
               {details.map((detail, index) => (
-                <div className="details-div-grid-box" key={index}>
+                <div className="details-div-grid-box" key={index} data-aos="fade-left" data-aos-duration="2000">
                   <h3>{detail.title}</h3>
                   <p>{commonText}</p>
                   <a href="more">MORE</a>
@@ -122,14 +122,14 @@ export default function Home() {
       <section className='keep-happy'>
         <div className="container">
           <div className="keep-happy-grid">
-            <div className="khg-div1">
+            <div className="khg-div1" data-aos="fade-right" data-aos-duration="1000">
               <h2>Keeping Pets Happy</h2>
               <p>Cras adipiscing enim eu turpis egestas pretium aenean pharetra magna. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Ut faucibus pulvinar elementum <u>integer</u> enim neque volutpat. Augue mauris augue neque gravida in. Venenatis cras sed felis eget velit aliquet sagittis. Morbi leo urna molestie at.</p>
               <div className="read-more-button">
                 <button>READ MORE</button>
               </div>
             </div>
-            <div className="khg-div2">
+            <div className="khg-div2" data-aos="fade-left" data-aos-duration="1000">
               <div className="khg-div2-round">
                 <img src={ladyCat2} alt="ladyCat2" />
               </div>
@@ -140,7 +140,7 @@ export default function Home() {
 
       <section className='help'>
         <div className="container4">
-          <div className="help-div">
+          <div className="help-div" data-aos="fade-up" data-aos-duration="1000">
             <div className="help-div1">
               <h2>Need Help?</h2>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>

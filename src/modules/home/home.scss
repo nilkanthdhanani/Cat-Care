@@ -7,6 +7,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    overflow: hidden;
 
     @include breakpoint("sm-max") {
         min-height: 400px;
@@ -176,6 +177,7 @@
 .thinking {
     background: linear-gradient(to bottom, #ded9d7 0%, #ded9d7 32%, #f7f5f5 32%, #f7f5f5 100%);
     padding-bottom: 100px;
+    overflow: hidden;
 
     @include breakpoint("sm-max") {
         padding-bottom: 50px;
@@ -421,6 +423,7 @@
 .details {
     background: linear-gradient(to bottom, #59504c 0%, #59504c 65%, #f7f5f5 65%, #f7f5f5 100%);
     padding: 60px 0;
+    overflow: hidden;
 
     @include breakpoint("lg-max") {
         padding: 0;
@@ -507,6 +510,7 @@
 .keep-happy {
     background: var(--bgcolor6);
     padding: 60px 0;
+    overflow: hidden;
 
     @include breakpoint("lg-max") {
         padding: 60px 0 0 0;
