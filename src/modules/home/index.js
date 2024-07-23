@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './home.scss';
 import { cat1, cat2, cat3, thinking, catlove1, catlove2, catlove3, mailCat, ladyCat, ladyCat2 } from '../../assets/images/jpg.js';
 import { facebook2, google2, instagram2, twitter2 } from '../../assets/images/svg.js';
@@ -14,6 +14,30 @@ export default function Home() {
   ];
 
   const commonText = 'Sample text. Click to select the text box. Click again or double click to start editing the text.';
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    setFormData({
+      name: '',
+      email: '',
+      phone: ''
+    });
+  };
 
   return (
     <div>
@@ -38,7 +62,7 @@ export default function Home() {
                 <img src={cat} alt={`cat${index + 1}`} />
                 <h3>Cat Cafe</h3>
                 <p>Etiam erat velit scelerisque in dictum non consectetur. Nisl purus in mollis nunc sed id semper. Cras fermentum odio eu feugiat pretium nibh ipsum. Tristique senectus</p>
-                <a href="more">MORE</a>
+                <a href="/">MORE</a>
               </div>
             ))}
           </div>
@@ -94,10 +118,12 @@ export default function Home() {
             <img src={mailCat} alt="mailcat" />
           </div>
           <h2 data-aos="fade-up" data-aos-duration="2000">Get the greatest stories right in your mailbox</h2>
-          <div className="mailbox-input">
-            <input type="email" placeholder='Enter a valid email address' />
-            <button>SUBMIT</button>
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="mailbox-input">
+              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter a valid email address" required />
+              <button>SUBMIT</button>
+            </div>
+          </form>
           <p>And don’t worry, we hate spam too! You can unsubcribe at anytime.</p>
         </div>
       </section>
@@ -111,7 +137,7 @@ export default function Home() {
                 <div className="details-div-grid-box" key={index} data-aos="fade-left" data-aos-duration="2000">
                   <h3>{detail.title}</h3>
                   <p>{commonText}</p>
-                  <a href="more">MORE</a>
+                  <a href="/">MORE</a>
                 </div>
               ))}
             </div>
@@ -159,25 +185,27 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="help-div2">
-              <div className="help-input">
-                <label>Name</label>
-                <input type="text" placeholder='Enter your Name' />
-              </div>
-              <div className="help-input-flex">
+            <form onSubmit={handleSubmit}>
+              <div className="help-div2">
                 <div className="help-input">
-                  <label>Phone</label>
-                  <input type="text" placeholder='Enter your phone (e.g. +14155552675)' />
+                  <label>Name</label>
+                  <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your Name" required />
                 </div>
-                <div className="help-input">
-                  <label>Email</label>
-                  <input type="email" placeholder='Enter a valid email address' />
+                <div className="help-input-flex">
+                  <div className="help-input">
+                    <label>Phone</label>
+                    <input type="number" name="phone" value={formData.phone} onChange={handleChange} placeholder='Enter your phone (e.g. +14155552675)' required />
+                  </div>
+                  <div className="help-input">
+                    <label>Email</label>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter a valid email address" required />
+                  </div>
+                </div>
+                <div className="help-button">
+                  <button>SUBMIT </button>
                 </div>
               </div>
-              <div className="help-button">
-                <button>SUBMIT </button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
